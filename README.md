@@ -21,7 +21,7 @@ Routes example:
 #### _Response Examples:_  
 Created (201): 
 
-```json
+```js
 {
   success: true,
   data: {
@@ -34,7 +34,7 @@ Created (201):
 ```
 
 Bad Request (400):
-```json
+```js
 {
   success: false,
   errors: {
