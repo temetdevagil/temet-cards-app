@@ -20,7 +20,7 @@ exports.register = (req, res) => {
 		if(error) { return res.status(500).json({ success: false, error} )};
 		//verify if response find some user, and if not, voilá 
 		if(!isEmpty(data)){
-			return res.status(401).json({success: false, errors: 'Email is already been taken'});
+			return res.status(401).json({success: false, errors: {email:'Email is already been taken'}});
 		}else{ 
 			//creating a new User object with data
 			const newUser = new User({
