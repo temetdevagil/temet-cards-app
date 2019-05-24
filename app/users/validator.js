@@ -21,6 +21,10 @@ exports.validateRegister = (data) => {
     if(!isEmail(data.email)){
         errors.email = 'The email input must be a email';
     }
+    
+    if(isEmpty(data.email)){
+        errors.email = 'The email input is required';
+    }
  
     if(!isLength(data.password, {min: 2, max: 30})){
         errors.name = 'The password input must contain a password between 2 and 30 characters';
